@@ -29,7 +29,7 @@ The file `PathPieceUsage.ipynb` runs through how to use PathPiece within python
 
 PathPiece automatically chooses the max token length `L` by looking at the longest token in the vocabulary.
 If you pass in a vocabulary from BPE, it will likely have some tokens that are very long runs of spaces.
-The complexity of tokenizing is `O(n*L)`, so having a large value of `L` will cause extreme slowdowns.
+The complexity of tokenizing is `O(n*L^2)`, so having a large value of `L` will cause extreme slowdowns.
 You sould ensure your vocabulary has a max token length of about 16. 
 
 ### License
